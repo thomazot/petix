@@ -1,3 +1,5 @@
+color = unquote('#a9b0b6')
+
 .old-price
     .label
         display: none
@@ -13,20 +15,27 @@
         span
             font-size: 14px
             font-weight: semibold
-            color: #a9b0b6
+            color: color
+
+.price-box
+    margin-bottom: 0
 
 .regular-price, .special-price
     .label
         display: none
 
-    .price span:before
-        content: 'Por '
+    .price span
+        &:before
+            content: 'Por '
+
+        &:after
+            content: ' ou'
 
     .label, .price
         span
-            font-size: 17px
+            font-size: 13px !important
             font-weight: semibold
-            color: color1_bg
+            color: #a9b0b6
 
 .preco-parcelado-sem-juros
     + .preco-parcelado
@@ -36,6 +45,14 @@
     display: flex
     justify-content: center
     aling-items: center
+    margin-bottom: 5px
+
+    &:after
+        content: 'Boleto ou Transferência '
+        display: block
+        font-size: 11px
+        font-weight: semibold
+        color: color2_bg
 
     .price
         flex: 0
@@ -45,9 +62,10 @@
         margin-left: 4px
 
     .price, .label
-        font-size: 16px
-        font-weight: semibold
-        color: color1_bg
+        span
+            font-size: 17px !important
+            font-weight: semibold
+            color: color1_bg
 
 .price-box-parcelado
     font-size: 12px

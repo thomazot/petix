@@ -133,18 +133,26 @@
     &__shop
         .regular-price, .special-price
             .price span
+                font-size: 13px !important
                 color: #a9b0b6
 
-                &:before
+                &:before, &:after
                     display: none
 
         .price-box-avista
             justify-content: flex-start
             align-items: flex-end
             text-align: left
+            flex-wrap: wrap
 
-            .price
-                font-size: 24px
+            &:after
+                flex: 0 0 100%
+
+            .price span
+                font-size: 24px !important
+
+            .label span
+                font-size: 16px !important
 
         .price-box-parcelado
             text-align: left

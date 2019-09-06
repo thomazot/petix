@@ -12546,6 +12546,9 @@ input[type=color] {
   font-weight: 600;
   color: #a9b0b6;
 }
+.price-box {
+  margin-bottom: 0;
+}
 .regular-price .label,
 .special-price .label {
   display: none;
@@ -12554,13 +12557,17 @@ input[type=color] {
 .special-price .price span:before {
   content: 'Por ';
 }
+.regular-price .price span:after,
+.special-price .price span:after {
+  content: ' ou';
+}
 .regular-price .label span,
 .special-price .label span,
 .regular-price .price span,
 .special-price .price span {
-  font-size: 17px;
+  font-size: 13px !important;
   font-weight: 600;
-  color: @bg(1);
+  color: #a9b0b6;
 }
 .preco-parcelado-sem-juros + .preco-parcelado {
   display: none;
@@ -12569,6 +12576,14 @@ input[type=color] {
   display: flex;
   justify-content: center;
   aling-items: center;
+  margin-bottom: 5px;
+}
+.price-box-avista:after {
+  content: 'Boleto ou Transferência ';
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: @bg(2);
 }
 .price-box-avista .price {
   flex: 0;
@@ -12577,9 +12592,9 @@ input[type=color] {
 .price-box-avista .label {
   margin-left: 4px;
 }
-.price-box-avista .price,
-.price-box-avista .label {
-  font-size: 16px;
+.price-box-avista .price span,
+.price-box-avista .label span {
+  font-size: 17px !important;
   font-weight: 600;
   color: @bg(1);
 }
@@ -13304,19 +13319,29 @@ input[type=color] {
 }
 .prod__shop .regular-price .price span,
 .prod__shop .special-price .price span {
+  font-size: 13px !important;
   color: #a9b0b6;
 }
 .prod__shop .regular-price .price span:before,
-.prod__shop .special-price .price span:before {
+.prod__shop .special-price .price span:before,
+.prod__shop .regular-price .price span:after,
+.prod__shop .special-price .price span:after {
   display: none;
 }
 .prod__shop .price-box-avista {
   justify-content: flex-start;
   align-items: flex-end;
   text-align: left;
+  flex-wrap: wrap;
 }
-.prod__shop .price-box-avista .price {
-  font-size: 24px;
+.prod__shop .price-box-avista:after {
+  flex: 0 0 100%;
+}
+.prod__shop .price-box-avista .price span {
+  font-size: 24px !important;
+}
+.prod__shop .price-box-avista .label span {
+  font-size: 16px !important;
 }
 .prod__shop .price-box-parcelado {
   text-align: left;

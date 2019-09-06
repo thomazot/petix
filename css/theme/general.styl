@@ -145,3 +145,29 @@ input[type=text], input[type=password], input[type=search], input[type=email], i
 .block-content
     .minhas-avaliacoes-de-produto, .meus-produtos-baixaveis
         display: none !important
+
+.block-content .minhas-avaliacoes-de-produto, .block-content .meus-produtos-baixaveis
+    display: none !important
+
+@media (max-width: 992px)
+    .head-alert
+        display: none !important
+
+.regular-price
+    margin-bottom: 3px
+
+.price-box-avista::after
+    margin-top: 3px
+    margin-bottom: 3px
+
+.preco-parcelado-sem-juros .upto
+    display: none
+
+.preco-parcelado-sem-juros:before
+    content: 'ou'
+
+.preco-parcelado-sem-juros:after
+    content: 'no cartão'
+
+.preco-parcelado-sem-juros .s-juros
+    display: none
